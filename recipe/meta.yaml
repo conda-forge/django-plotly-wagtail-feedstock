@@ -1,13 +1,13 @@
 {% set name = "django-plotly-wagtail" %}
-{% set version = "0.0.3" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-plotly-wagtail-{{ version }}.tar.gz
-  sha256: 4603f0f27af904d8b0febbecc14ee9ae8610a3bd08040e1c0cee94cb3d872d48
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 10bd05374c213fc34ddbc52c790ca5243043a177831ab8a8e8507d4f52c8eeea
 
 build:
   noarch: python
