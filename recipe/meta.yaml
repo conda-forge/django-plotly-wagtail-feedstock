@@ -34,9 +34,13 @@ test:
     - dpwagtail
   commands:
     - pip check
+    # dash 2.18.2 has requirement Flask<3.1,>=1.0.4, but you have flask 3.1.0.
+    # dash 2.18.2 has requirement Werkzeug<3.1, but you have werkzeug 3.1.3
   requires:
     - pip
     - python {{ python_min }}
+    - flask >=1.0.4,<3.1
+    - werkzeug <3.1
 
 about:
   home: https://gitlab.com/GibbsConsulting/django-plotly-wagtail
